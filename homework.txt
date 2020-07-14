@@ -1,0 +1,599 @@
+sandi@DESKTOP-OFLL6H1 MINGW64 /e/git homework day1/day1_hw (master)
+$ code README.md
+
+sandi@DESKTOP-OFLL6H1 MINGW64 /e/git homework day1/day1_hw (master)
+$ ls
+README.md
+
+sandi@DESKTOP-OFLL6H1 MINGW64 /e/git homework day1/day1_hw (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        README.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+sandi@DESKTOP-OFLL6H1 MINGW64 /e/git homework day1/day1_hw (master)
+$ code instructions.txt
+
+sandi@DESKTOP-OFLL6H1 MINGW64 /e/git homework day1/day1_hw (master)
+$ ls
+instructions.txt  README.md
+
+sandi@DESKTOP-OFLL6H1 MINGW64 /e/git homework day1/day1_hw (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        README.md
+        instructions.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+sandi@DESKTOP-OFLL6H1 MINGW64 /e/git homework day1/day1_hw (master)
+$ git add .
+
+sandi@DESKTOP-OFLL6H1 MINGW64 /e/git homework day1/day1_hw (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   README.md
+        new file:   instructions.txt
+
+
+sandi@DESKTOP-OFLL6H1 MINGW64 /e/git homework day1/day1_hw (master)
+$ git commit
+Aborting commit due to empty commit message.
+
+
+sandi@DESKTOP-OFLL6H1 MINGW64 /e/git homework day1/day1_hw (master)
+$ git commit -m "Add two files Readme & Instructions"
+[master (root-commit) 35b8015] Add two files Readme & Instructions
+ 2 files changed, 7 insertions(+)
+ create mode 100644 README.md
+ create mode 100644 instructions.txt
+
+sandi@DESKTOP-OFLL6H1 MINGW64 /e/git homework day1/day1_hw (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+sandi@DESKTOP-OFLL6H1 MINGW64 /e/git homework day1/day1_hw (master)
+$ code README.md
+
+sandi@DESKTOP-OFLL6H1 MINGW64 /e/git homework day1/day1_hw (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+sandi@DESKTOP-OFLL6H1 MINGW64 /e/git homework day1/day1_hw (master)
+$ git add .
+
+sandi@DESKTOP-OFLL6H1 MINGW64 /e/git homework day1/day1_hw (master)
+$ git commit -m "Modify README.md file by using h4 tag"
+[master 7bfb6c8] Modify README.md file by using h4 tag
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+sandi@DESKTOP-OFLL6H1 MINGW64 /e/git homework day1/day1_hw (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+sandi@DESKTOP-OFLL6H1 MINGW64 /e/git homework day1/day1_hw (master)
+$ git log
+commit 7bfb6c8b8de0359b21810efd92df7730a1c9b8ab (HEAD -> master)
+Author: Sandipan Ghosh <sandipan.g@zensar.com>
+Date:   Tue Jul 14 20:02:41 2020 +0530
+
+    Modify README.md file by using h4 tag
+
+commit 35b8015bc1187820347256aa7f33503deb4a1d4f
+Author: Sandipan Ghosh <sandipan.g@zensar.com>
+Date:   Tue Jul 14 19:55:08 2020 +0530
+
+    Add two files Readme & Instructions
+
+sandi@DESKTOP-OFLL6H1 MINGW64 /e/git homework day1/day1_hw (master)
+$ git log --oneline
+7bfb6c8 (HEAD -> master) Modify README.md file by using h4 tag
+35b8015 Add two files Readme & Instructions
+
+sandi@DESKTOP-OFLL6H1 MINGW64 /e/git homework day1/day1_hw (master)
+$ git reset HEAD~1
+Unstaged changes after reset:
+M       README.md
+
+sandi@DESKTOP-OFLL6H1 MINGW64 /e/git homework day1/day1_hw (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+sandi@DESKTOP-OFLL6H1 MINGW64 /e/git homework day1/day1_hw (master)
+$ git log
+commit 35b8015bc1187820347256aa7f33503deb4a1d4f (HEAD -> master)
+Author: Sandipan Ghosh <sandipan.g@zensar.com>
+Date:   Tue Jul 14 19:55:08 2020 +0530
+
+    Add two files Readme & Instructions
+
+sandi@DESKTOP-OFLL6H1 MINGW64 /e/git homework day1/day1_hw (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+sandi@DESKTOP-OFLL6H1 MINGW64 /e/git homework day1/day1_hw (master)
+$ git add .
+
+sandi@DESKTOP-OFLL6H1 MINGW64 /e/git homework day1/day1_hw (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   README.md
+
+
+sandi@DESKTOP-OFLL6H1 MINGW64 /e/git homework day1/day1_hw (master)
+$ code README.md
+
+sandi@DESKTOP-OFLL6H1 MINGW64 /e/git homework day1/day1_hw (master)
+$ git commit -m "Revert changes to README.md"
+[master f90b63d] Revert changes to README.md
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+sandi@DESKTOP-OFLL6H1 MINGW64 /e/git homework day1/day1_hw (master)
+$ git log
+commit f90b63d74ff6005d3adb9e5f69b0a1ce0c8d3c7e (HEAD -> master)
+Author: Sandipan Ghosh <sandipan.g@zensar.com>
+Date:   Tue Jul 14 20:16:06 2020 +0530
+
+    Revert changes to README.md
+
+commit 35b8015bc1187820347256aa7f33503deb4a1d4f
+Author: Sandipan Ghosh <sandipan.g@zensar.com>
+Date:   Tue Jul 14 19:55:08 2020 +0530
+
+    Add two files Readme & Instructions
+
+sandi@DESKTOP-OFLL6H1 MINGW64 /e/git homework day1/day1_hw (master)
+$ git reset --hard HEAD~1
+HEAD is now at 35b8015 Add two files Readme & Instructions
+
+sandi@DESKTOP-OFLL6H1 MINGW64 /e/git homework day1/day1_hw (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+sandi@DESKTOP-OFLL6H1 MINGW64 /e/git homework day1/day1_hw (master)
+$ code README.md
+
+sandi@DESKTOP-OFLL6H1 MINGW64 /e/git homework day1/day1_hw (master)
+$ git reflog
+35b8015 (HEAD -> master) HEAD@{0}: reset: moving to HEAD~1
+f90b63d HEAD@{1}: commit: Revert changes to README.md
+35b8015 (HEAD -> master) HEAD@{2}: reset: moving to HEAD~1
+7bfb6c8 HEAD@{3}: commit: Modify README.md file by using h4 tag
+35b8015 (HEAD -> master) HEAD@{4}: commit (initial): Add two files Readme & Instructions
+
+sandi@DESKTOP-OFLL6H1 MINGW64 /e/git homework day1/day1_hw (master)
+$ code index.html
+
+sandi@DESKTOP-OFLL6H1 MINGW64 /e/git homework day1/day1_hw (master)
+$ ls
+index.html  instructions.txt  README.md
+
+sandi@DESKTOP-OFLL6H1 MINGW64 /e/git homework day1/day1_hw (master)
+$ git add .
+
+sandi@DESKTOP-OFLL6H1 MINGW64 /e/git homework day1/day1_hw (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   index.html
+
+
+sandi@DESKTOP-OFLL6H1 MINGW64 /e/git homework day1/day1_hw (master)
+$ git commit -m "Add index.html file"
+[master 2bafff4] Add index.html file
+ 1 file changed, 15 insertions(+)
+ create mode 100644 index.html
+
+sandi@DESKTOP-OFLL6H1 MINGW64 /e/git homework day1/day1_hw (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+sandi@DESKTOP-OFLL6H1 MINGW64 /e/git homework day1/day1_hw (master)
+$ git remote add origin https://github.com/dotnet-sandipan-july-2020/github-day1-hw.git
+
+sandi@DESKTOP-OFLL6H1 MINGW64 /e/git homework day1/day1_hw (master)
+$ git push -u origin master
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (7/7), 897 bytes | 897.00 KiB/s, done.
+Total 7 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/dotnet-sandipan-july-2020/github-day1-hw.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+sandi@DESKTOP-OFLL6H1 MINGW64 /e/git homework day1/day1_hw (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+sandi@DESKTOP-OFLL6H1 MINGW64 /e/git homework day1/day1_hw (master)
+$ git pull https://github.com/dotnet-sandipan-july-2020/github-day1-hw.git
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 761 bytes | 5.00 KiB/s, done.
+From https://github.com/dotnet-sandipan-july-2020/github-day1-hw
+ * branch            HEAD       -> FETCH_HEAD
+Updating 2bafff4..618ef9d
+Fast-forward
+ index.html | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+sandi@DESKTOP-OFLL6H1 MINGW64 /e/git homework day1/day1_hw (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+sandi@DESKTOP-OFLL6H1 MINGW64 /e/git homework day1/day1_hw (master)
+$ code index.html
+
+sandi@DESKTOP-OFLL6H1 MINGW64 /e/git homework day1/day1_hw (master)
+$ code README.md
+
+sandi@DESKTOP-OFLL6H1 MINGW64 /e/git homework day1/day1_hw (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+sandi@DESKTOP-OFLL6H1 MINGW64 /e/git homework day1/day1_hw (master)
+$ git add .
+
+sandi@DESKTOP-OFLL6H1 MINGW64 /e/git homework day1/day1_hw (master)
+$ git commit -m "Change in README.md add h3 tag"
+[master 3f8e2f5] Change in README.md add h3 tag
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+sandi@DESKTOP-OFLL6H1 MINGW64 /e/git homework day1/day1_hw (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+sandi@DESKTOP-OFLL6H1 MINGW64 /e/git homework day1/day1_hw (master)
+$ git push -u origin master
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 405 bytes | 405.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/dotnet-sandipan-july-2020/github-day1-hw.git
+   618ef9d..3f8e2f5  master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+sandi@DESKTOP-OFLL6H1 MINGW64 /e/git homework day1/day1_hw (master)
+$ git log
+commit 3f8e2f5241a60363b488156a3b4730a3e8855d75 (HEAD -> master, origin/master)
+Author: Sandipan Ghosh <sandipan.g@zensar.com>
+Date:   Tue Jul 14 21:00:11 2020 +0530
+
+    Change in README.md add h3 tag
+
+commit 618ef9d0cfb3a09472501826ca7877a94c68091b
+Author: dotnet-sandipan-july-2020 <68274705+dotnet-sandipan-july-2020@users.noreply.github.com>
+Date:   Tue Jul 14 20:47:16 2020 +0530
+
+    Add one new product
+
+commit 2bafff4401389741aab37e86e1f0a6b17f2d5abd
+Author: Sandipan Ghosh <sandipan.g@zensar.com>
+Date:   Tue Jul 14 20:33:37 2020 +0530
+
+    Add index.html file
+
+commit 35b8015bc1187820347256aa7f33503deb4a1d4f
+Author: Sandipan Ghosh <sandipan.g@zensar.com>
+Date:   Tue Jul 14 19:55:08 2020 +0530
+
+
+sandi@DESKTOP-OFLL6H1 MINGW64 /e/git homework day1/day1_hw (master)
+$ git log --oneline
+3f8e2f5 (HEAD -> master, origin/master) Change in README.md add h3 tag
+618ef9d Add one new product
+2bafff4 Add index.html file
+35b8015 Add two files Readme & Instructions
+sandi@DESKTOP-OFLL6H1 MINGW64 /e/git homework day1/day1_hw (master)
+$ git diff 3f8e 618e
+diff --git a/README.md b/README.md
+index 85cd291..7110079 100644
+--- a/README.md
++++ b/README.md
+@@ -1,4 +1,3 @@
+ ##Please read the instructions in README file
+ This file contains instructions to open project
+-The word **README** is in Bold
+-###Writing text in H3 tag using md syntax
+\ No newline at end of file
++The word **README** is in Bold
+\ No newline at end of file
+sandi@DESKTOP-OFLL6H1 MINGW64 /e/git homework day1/day1_hw (master)
+$ git checkout -b feature
+Switched to a new branch 'feature'
+
+sandi@DESKTOP-OFLL6H1 MINGW64 /e/git homework day1/day1_hw (feature)
+$ ls
+index.html  instructions.txt  README.md
+
+sandi@DESKTOP-OFLL6H1 MINGW64 /e/git homework day1/day1_hw (feature)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+sandi@DESKTOP-OFLL6H1 MINGW64 /e/git homework day1/day1_hw (master)
+$ git branch
+  feature
+* master
+
+sandi@DESKTOP-OFLL6H1 MINGW64 /e/git homework day1/day1_hw (master)
+$ git checkout feature
+Switched to branch 'feature'
+
+sandi@DESKTOP-OFLL6H1 MINGW64 /e/git homework day1/day1_hw (feature)
+$ git branch
+* feature
+  master
+
+sandi@DESKTOP-OFLL6H1 MINGW64 /e/git homework day1/day1_hw (feature)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+sandi@DESKTOP-OFLL6H1 MINGW64 /e/git homework day1/day1_hw (master)
+$ git checkout -b test-branch
+Switched to a new branch 'test-branch'
+
+sandi@DESKTOP-OFLL6H1 MINGW64 /e/git homework day1/day1_hw (test-branch)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+sandi@DESKTOP-OFLL6H1 MINGW64 /e/git homework day1/day1_hw (master)
+$ git branch
+  feature
+* master
+  test-branch
+
+sandi@DESKTOP-OFLL6H1 MINGW64 /e/git homework day1/day1_hw (master)
+$ git checkout test-branch
+Switched to branch 'test-branch'
+
+sandi@DESKTOP-OFLL6H1 MINGW64 /e/git homework day1/day1_hw (test-branch)
+$ ls
+index.html  instructions.txt  README.md
+
+sandi@DESKTOP-OFLL6H1 MINGW64 /e/git homework day1/day1_hw (test-branch)
+$ git diff test-branch master
+
+sandi@DESKTOP-OFLL6H1 MINGW64 /e/git homework day1/day1_hw (test-branch)
+$ code index.html
+
+sandi@DESKTOP-OFLL6H1 MINGW64 /e/git homework day1/day1_hw (test-branch)
+$ git status
+On branch test-branch
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+sandi@DESKTOP-OFLL6H1 MINGW64 /e/git homework day1/day1_hw (test-branch)
+$ git add .
+
+sandi@DESKTOP-OFLL6H1 MINGW64 /e/git homework day1/day1_hw (test-branch)
+$ git commit -m "New table add in index.html test-branch"
+[test-branch aa9523b] New table add in index.html test-branch
+ 1 file changed, 18 insertions(+)
+
+sandi@DESKTOP-OFLL6H1 MINGW64 /e/git homework day1/day1_hw (test-branch)
+$ git status
+On branch test-branch
+nothing to commit, working tree clean
+
+sandi@DESKTOP-OFLL6H1 MINGW64 /e/git homework day1/day1_hw (test-branch)
+$ git diff master test-branch
+diff --git a/index.html b/index.html
+index 493390f..0ed84ff 100644
+--- a/index.html
++++ b/index.html
+@@ -12,5 +12,23 @@
+             <li>marker pens</li>
+             <li>Mobile phones</li>
+         </ul>
++        <table border=2>
++            <tr>
++                <td>Empid</td>
++                <td>Empname</td>
++            </tr>
++            <tr>
++                <td>100</td>
++                <td>David</td>
++            </tr>
++            <tr>
++                <td>101</td>
++                <td>Allan</td>
++            </tr>
++            <tr>
++                <td>102</td>
+
+sandi@DESKTOP-OFLL6H1 MINGW64 /e/git homework day1/day1_hw (test-branch)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+sandi@DESKTOP-OFLL6H1 MINGW64 /e/git homework day1/day1_hw (master)
+$ git merge test-branch
+Updating 3f8e2f5..aa9523b
+Fast-forward
+ index.html | 18 ++++++++++++++++++
+ 1 file changed, 18 insertions(+)
+
+sandi@DESKTOP-OFLL6H1 MINGW64 /e/git homework day1/day1_hw (master)
+$ code index.html
+
+sandi@DESKTOP-OFLL6H1 MINGW64 /e/git homework day1/day1_hw (master)
+$  git checkout feature
+Switched to branch 'feature'
+
+sandi@DESKTOP-OFLL6H1 MINGW64 /e/git homework day1/day1_hw (feature)
+$ code index.html
+
+sandi@DESKTOP-OFLL6H1 MINGW64 /e/git homework day1/day1_hw (feature)
+$ code index.css
+
+sandi@DESKTOP-OFLL6H1 MINGW64 /e/git homework day1/day1_hw (feature)
+$ git add .
+
+sandi@DESKTOP-OFLL6H1 MINGW64 /e/git homework day1/day1_hw (feature)
+$ git commit -m "Add new css file with name index.css"
+[feature 9e7981d] Add new css file with name index.css
+ 1 file changed, 4 insertions(+)
+ create mode 100644 index.css
+
+sandi@DESKTOP-OFLL6H1 MINGW64 /e/git homework day1/day1_hw (feature)
+$ git checkout master
+Switched to branch 'master'
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+sandi@DESKTOP-OFLL6H1 MINGW64 /e/git homework day1/day1_hw (master)
+$ code file1.txt
+
+sandi@DESKTOP-OFLL6H1 MINGW64 /e/git homework day1/day1_hw (master)
+$ git add .
+
+sandi@DESKTOP-OFLL6H1 MINGW64 /e/git homework day1/day1_hw (master)
+$ git commit -m "Create file1.txt in master"
+[master 535e154] Create file1.txt in master
+ 1 file changed, 1 insertion(+)
+ create mode 100644 file1.txt
+
+sandi@DESKTOP-OFLL6H1 MINGW64 /e/git homework day1/day1_hw (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+sandi@DESKTOP-OFLL6H1 MINGW64 /e/git homework day1/day1_hw (master)
+$ git checkout feature
+Switched to branch 'feature'
+
+sandi@DESKTOP-OFLL6H1 MINGW64 /e/git homework day1/day1_hw (feature)
+$ code index.css
+
+sandi@DESKTOP-OFLL6H1 MINGW64 /e/git homework day1/day1_hw (feature)
+$ git add .
+
+sandi@DESKTOP-OFLL6H1 MINGW64 /e/git homework day1/day1_hw (feature)
+$ git commit -m "Add class selector in feature"
+[feature be7ecc3] Add class selector in feature
+ 1 file changed, 4 insertions(+)
+
+sandi@DESKTOP-OFLL6H1 MINGW64 /e/git homework day1/day1_hw (feature)
+$ git status
+On branch feature
+nothing to commit, working tree clean
+
+sandi@DESKTOP-OFLL6H1 MINGW64 /e/git homework day1/day1_hw (feature)
+$ git checkout master
+Switched to branch 'master'
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+sandi@DESKTOP-OFLL6H1 MINGW64 /e/git homework day1/day1_hw (master)
+$ git merge feature
+Merge made by the 'recursive' strategy.
+ index.css | 8 ++++++++
+ 1 file changed, 8 insertions(+)
+ create mode 100644 index.css
+
+sandi@DESKTOP-OFLL6H1 MINGW64 /e/git homework day1/day1_hw (master)
+$
+
+sandi@DESKTOP-OFLL6H1 MINGW64 /e/git homework day1/day1_hw (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 5 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+sandi@DESKTOP-OFLL6H1 MINGW64 /e/git homework day1/day1_hw (master)
+$ git log --oneline
+69e52ec (HEAD -> master) Merge branch 'feature'
+be7ecc3 (feature) Add class selector in feature
+535e154 Create file1.txt in master
+9e7981d Add new css file with name index.css
+aa9523b (test-branch) New table add in index.html test-branch
+3f8e2f5 (origin/master) Change in README.md add h3 tag
+618ef9d Add one new product
+2bafff4 Add index.html file
+35b8015 Add two files Readme & Instructions
+
+
+
+
+
